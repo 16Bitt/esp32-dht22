@@ -1,0 +1,50 @@
+menu "DHT22"
+  config DHT22_TAG
+    string "DHT22 Log Tag"
+    default "DHT22"
+
+  config DHT22_GPIO
+    int "DHT22 GPIO Port"
+    default 2
+    help
+      Data line for reading and writing data from the DHT22
+
+  config DHT22_DELAY
+    int "DHT22 chip warmup delay (seconds)"
+    default 2
+    help
+      The DHT22 can be particularly slow, do not set below 2 or the chip will not be ready.
+
+  config DHT22_HOST_DIAL_LO_DURATION
+    int "Host dial low duration (microseconds)"
+    default 3000
+    help
+      Amount of time for the ESP to wait during the sensor dial.
+
+  config DHT22_HOST_DIAL_HI_DURATION
+    int "Host dial high duration (microseconds)"
+    default 33
+    help
+      Amount of time for the ESP to wait during the sensor dial.
+
+  config DHT22_QUEUE_READ_TIMEOUT
+    int "DHT22 max ticks per queue read"
+    default 1000
+
+  config DHT22_SENSOR_READY_DURATION
+    int "DHT22 data ready threshold (microseconds)"
+    default 83
+
+  config DHT22_SENSOR_BIT_START_DURATION
+    int "DHT22 bit start threshold (microseconds)"
+    default 53
+
+  config DHT22_SENSOR_BIT_MAX_DURATION
+    int "DHT22 bit max threshold (microseconds)"
+    default 73
+
+  config DHT22_BIT_POSITIVE_THRESHOLD
+    int "DHT22 bit positive threshold (microseconds)"
+    default 33
+
+endmenu

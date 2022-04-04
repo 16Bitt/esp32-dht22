@@ -1,0 +1,2 @@
+version: "0.0.1"
+description: "DHT22 temperature and humidity sensor interface"
